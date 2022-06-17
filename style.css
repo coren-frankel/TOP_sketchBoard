@@ -24,7 +24,6 @@ a {
 #griddle {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 #opt {
     gap: 30px;
@@ -36,17 +35,18 @@ button {
     margin: 5px;
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color: darkred;
+    background-color: slateblue;
     color: aqua;
     justify-content: center;
     align-items: center;
 }
-#grid {
-    width: 640px;
-    height: 640px;
+#griddle {
+    width: 960px;
+    height: 960px;
+    background-color: black;
+    border: 0 black;
 }
-.row,
-.col {
+.default {
     display: inline-block;
     line-height: 0;
     border: solid .1px lawngreen;
@@ -57,9 +57,17 @@ button {
 
 .col:hover{
     background-color: whitesmoke;
-    border: solid .1px magenta;
+    border: solid .1px royalblue;
 }
 .row:hover{
     background-color: whitesmoke;
-    border: solid .1px magenta;
+    border: solid .1px royalblue;
+}
+.white {
+    display: inline-block;
+    line-height: 0;
+    background-color: whitesmoke;
+    border: solid .1px royalblue;
+    height: 38px;
+    width: 38px;
 }
