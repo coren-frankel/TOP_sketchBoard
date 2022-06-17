@@ -1,4 +1,4 @@
-const grid = document.querySelectorAll('.col');
+const griddle = document.querySelectorAll('div');
 var box = [];
 const square = 16;
 var row = square, col = row;
@@ -14,8 +14,8 @@ function drawGrid() {
         }
         output += "</div>";
     }
-    document.getElementById('grid').innerHTML = output;
+    document.getElementById('griddle').innerHTML = output;
 }
 drawGrid();
-box.forEach((div) => {
-    div.addEventListener('click', (e) => {console.log(e)})});
+griddle.forEach((div) => {
+    div.addEventListener('click', (e) => {console.log(e.target.id)})});

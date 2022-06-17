@@ -8,20 +8,20 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: greenyellow;
+    color: lawngreen;
     font-family: 'Press Start 2P';
     font-size: 35px;
 }
 a {
     text-decoration: none;
-    color: greenyellow;
+    color: lawngreen;
 }
 #quote {
     font-size: 14px;
     margin: 10px;
 }
 #opt,
-#grid {
+#griddle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,29 +36,30 @@ button {
     margin: 5px;
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color: black;
+    background-color: darkred;
     color: aqua;
     justify-content: center;
     align-items: center;
 }
-/*#grid {
-    position: absolute;
-    top: 100px;
-    left: 150px;
-}*/
-.row {
-    display: inline-block;
-    line-height: 0;
-    background-color: black;
-    border: solid .1px greenyellow;
-    width: 38px;
-    height: 38px;
-    
+#grid {
+    width: 640px;
+    height: 640px;
 }
+.row,
 .col {
     display: inline-block;
+    line-height: 0;
+    border: solid .1px lawngreen;
     background-color: black;
-    border: solid .1px greenyellow;
     height: 38px;
     width: 38px;
+}
+
+.col:hover{
+    background-color: whitesmoke;
+    border: solid .1px magenta;
+}
+.row:hover{
+    background-color: whitesmoke;
+    border: solid .1px magenta;
 }
