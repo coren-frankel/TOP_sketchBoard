@@ -1,39 +1,41 @@
-const griddle = document.querySelectorAll('div');
-var box = [];
+const griddle = document.querySelectorAll(`div`);
+var box = [], color = 'dark';
 const square = 16;
 var row = square, col = row;
-function drawGrid() {
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+function hueStroke(e) {
+    //if (e.type === 'mouseover' && !mouseDown) return
+    switch (color) {
+        case 'dark':
+            this.classList.add('light');
+        case 'light':
+            this.classList.add('dark');
+    }
+}
+
+
+function drawGrid(square) {
     output = "";
     for(row = 0;row < square; row++){
         box[row] = [];
-        output += "<div class='default'>";
+        output += "<div class='dark'>";
         for(col = 0;col < square; col++){
             box[row][col] = ''
             box[row].push([col]);
-            output += `<div id="box[${row}][${col}]" class='default'></div>`;
+            output += `<div id="box[${row}][${col}]" class='dark'></div>`;
         }
         output += "</div>";
     }
     document.getElementById('griddle').innerHTML = output;
-}
-drawGrid();
-
-colorDict = {
-    0: 'default',
-    1: 'white'
-}
-
-//function hover(div, white){
-//    div.addEventListener('mouseenter', e => div.classList.add('white'));
-//    div.addEventListener('mouseleave', e => div.classList.add('default'));
-//}
-//hover(document.querySelector('div'), 'white');
-griddle.forEach((div) => {
-    div.addEventListener('click', (e) => {e.target.classList.toggle('white');
-    div.addEventListener('mouseenter', e => div.classList.add('white'));
-    div.addEventListener('mouseleave', e => div.classList.add('default'));
     
-    //const temp = e.target.id;
+    griddle.forEach((div) => { 
+        div.addEventListener('mouseover', (e) => {if (mouseDown == true) {
+            e.target.classList.add(`light`)}})
+        //div.addEventListener('mouseover', hueStroke)
     })
-});
+    
+}
 
+drawGrid(square);

@@ -44,9 +44,9 @@ button {
     width: 960px;
     height: 960px;
     background-color: black;
-    border: 0 black;
+    border: 0 lawngreen;
 }
-.default {
+.dark {
     display: inline-block;
     line-height: 0;
     border: solid .1px lawngreen;
@@ -55,15 +55,12 @@ button {
     width: 38px;
 }
 
-.col:hover{
+
+/*.default:hover{
     background-color: whitesmoke;
     border: solid .1px royalblue;
-}
-.row:hover{
-    background-color: whitesmoke;
-    border: solid .1px royalblue;
-}
-.white {
+}*/
+.light {
     display: inline-block;
     line-height: 0;
     background-color: whitesmoke;
