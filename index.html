@@ -10,18 +10,20 @@
     <body> 
         <h1 id="quote">"Sketch me like one of your french girls" -Wayne Gretzky</h1>
         <nav id="opt">
-            <button id="color" onclick="">Canvas Color</button>
-            <button id="eraser">Eraser</button>
+            <button id="color" onclick="color = 'light'; drawGrid(square)">Canvas Color</button>
+            <button id="eraser" onclick="wipeGrid()">Clear All</button>
             <button id="rainbow">Random Colors</button>
-            <button id="grab">Color Grabber</button>
+            <button id="grab" onclick="">Color Grabber</button>
             <button id="lines" onclick="">Toggle Grid Lines</button>
+            <div class="slidecontainer">
+                <input type="range" min="16" max="100" value="16" class="slider" id="myRange">
+            </div>
         </nav>
-        <div id="griddle"></div>
+        <div id="gridBox">
+            <div id="grid"></div>
+        </div>
     </body>
     <script>
-        //window.addEventListener('DOMContentLoaded', (event) => {
-            //console.log('DOM fully loaded and parsed');
-            //drawGrid();
-    //});
+    
     </script>
 </html>
