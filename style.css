@@ -20,10 +20,8 @@ a {
     font-size: 14px;
     margin: 10px;
 }
-/*#gridBox {
-    height: 640px;
-    width: 640px;
-}*/
+#gridBox {
+}
 #opt,
 #gridBox,
 .slidecontainer {
@@ -49,13 +47,13 @@ button,
     align-items: center;
 }
 #grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1 fr 300px;
     flex-wrap: wrap;
     background-color: black;
     border: 1px lawngreen;
     height: 640px;
     width: 640px;
-    
 }
 .dark {
     border: solid 1px lawngreen;
@@ -101,4 +99,16 @@ button,
     background: aqua;
     border-radius: 25px;
     cursor: pointer;
+}
+.border-top-left {
+    border-top: 1px solid lawngreen;
+    border-left: 1px solid lawngreen;
+}
+
+.border-right {
+    border-right: 1px solid lawngreen;
+}
+
+.border-bottom {
+    border-bottom: 1px solid lawngreen;
 }
