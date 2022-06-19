@@ -21,6 +21,7 @@ a {
     margin: 10px;
 }
 #gridBox {
+
 }
 #opt,
 #gridBox,
@@ -48,23 +49,22 @@ button,
 }
 #grid {
     display: grid;
-    grid-template-columns: 1 fr 300px;
+    grid-template-columns: 1fr 640px;
     flex-wrap: wrap;
-    background-color: black;
-    border: 1px lawngreen;
+    /*background-color: black;
+    border: 1px lawngreen;*/
     height: 640px;
     width: 640px;
 }
 .dark {
-    border: solid 1px lawngreen;
+    border-color: lawngreen;
     background-color: black;
 }
-/*.default:hover{
+.default{
     background-color: whitesmoke;
     border: solid .1px royalblue;
-}*/
+}
 .light {
-    border: solid .1px;
     background-color: whitesmoke;
     border-color: royalblue;
 }
