@@ -7,21 +7,23 @@
         <title>Sketch N' Etch</title>
     </head>
     <header><a href="https://github.com/coren-frankel">UBK's</a>&nbsp;Sketch N' Etch</header>
-    <body>
+    <body> 
         <h1 id="quote">"Sketch me like one of your french girls" -Wayne Gretzky</h1>
-        <div id="opt">
-            <button id="color">Color</button>
-            <button id="eraser">Eraser</button>
-            <button id="rainbow">Rainbow</button>
-            <button id="grab">Color Grabber</button>
-            <button id="lines">Toggle Grid Lines</button>
+        <nav id="opt">
+            <button id="color" onclick="color = 'light'; drawGrid(square)">Canvas Color</button>
+            <button id="eraser" onclick="wipeGrid()">Clear All</button>
+            <button id="rainbow">Random Colors</button>
+            <button id="grab" onclick="">Color Grabber</button>
+            <button id="lines" onclick="">Toggle Grid Lines</button>
+            <div class="slidecontainer">
+                <input type="range" min="16" max="100" value="16" class="slider" id="myRange">
+            </div>
+        </nav>
+        <div id="gridBox">
+            <div id="grid"></div>
         </div>
-        <div id="griddle"></div>
     </body>
     <script>
-        //window.addEventListener('DOMContentLoaded', (event) => {
-            //console.log('DOM fully loaded and parsed');
-            //drawGrid();
-    //});
+    
     </script>
 </html>

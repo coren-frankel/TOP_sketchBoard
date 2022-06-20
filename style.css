@@ -20,46 +20,95 @@ a {
     font-size: 14px;
     margin: 10px;
 }
+#gridBox {
+
+}
 #opt,
-#griddle {
+#gridBox,
+.slidecontainer {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 #opt {
     gap: 30px;
 }
 button {
+    background-color: slateblue;
+    color: aqua;
+}
+button,
+.slidecontainer {
     display: flex;
     width: 120px;
     height: 30px;
     margin: 5px;
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color: darkred;
-    color: aqua;
     justify-content: center;
     align-items: center;
 }
 #grid {
-    width: 640px;
+    display: grid;
+    grid-template-columns: 1fr 640px;
+    flex-wrap: wrap;
+    /*background-color: black;
+    border: 1px lawngreen;*/
     height: 640px;
+    width: 640px;
 }
-.row,
-.col {
-    display: inline-block;
-    line-height: 0;
-    border: solid .1px lawngreen;
+.dark {
+    border-color: lawngreen;
     background-color: black;
-    height: 38px;
-    width: 38px;
+}
+.default{
+    background-color: whitesmoke;
+    border: solid .1px royalblue;
+}
+.light {
+    background-color: whitesmoke;
+    border-color: royalblue;
+}
+.slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 25px;
+    background: slateblue;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    -moz-transition: opacity .2s;
+    transition: opacity .2s;
+    border-radius: 25px;
+}
+.slider:hover {
+    opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: aqua;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: aqua;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.border-top-left {
+    border-top: 1px solid lawngreen;
+    border-left: 1px solid lawngreen;
 }
 
-.col:hover{
-    background-color: whitesmoke;
-    border: solid .1px magenta;
+.border-right {
+    border-right: 1px solid lawngreen;
 }
-.row:hover{
-    background-color: whitesmoke;
-    border: solid .1px magenta;
+
+.border-bottom {
+    border-bottom: 1px solid lawngreen;
 }
